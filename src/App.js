@@ -1,18 +1,19 @@
 import React from 'react';
 import ShakaPlayer from 'shaka-player-react';
+import uuid from 'react-uuid'
 import './App.css'
+import { videoAssets } from './data/video-list';
+import { Button } from '@mui/material';
+import FeaturesList from './components/FeaturesList';
+import SelectVideoList from './components/SelectVideoList';
+// import BasicSelect from './components/BasicList';
 
-const STREAMS = [
-  {
-    name: 'Angel One MPEG-DASH',
-    src: 'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd'
-  },
-  {
-    name: 'Big Buck Bunny HLS',
-    src:
-      'https://storage.googleapis.com/shaka-demo-assets/bbb-dark-truths-hls/hls.m3u8'
-  }
-];
+const STREAMS = videoAssets.map(asset => ({
+  id: uuid(),
+  src: asset.manifestUri,
+  name: asset.name,
+  features: asset.feature || []
+}));
 
 function App() {
   const [show, setShow] = React.useState(true);
@@ -31,29 +32,44 @@ function App() {
     setChromeless(!chromeless);
   }
 
-  const [src, setSrc] = React.useState(STREAMS[0].src);
+  const [src, setSrc] = React.useState(STREAMS[0].id);
+  const [video , setVideo] = React.useState(STREAMS[0]);
 
   function onSelectSrc(event) {
-    setSrc(event.target.value);
+    const id = event.target.value;
+    setSrc(id);
+    setVideo(STREAMS.find(stream => stream.id === id));
   }
 
   return (
     <div>
       <div>
-        <button onClick={onToggle}>{show ? 'Hide' : 'Show'}</button>
+        <Button
+          onClick={onToggle}
+          variant={show ? 'outlined' : 'contained'}
+          size={show ? 'small' : 'large'}>
+            {show ? 'Hide' : 'Show'}
+          </Button>
       </div>
       <div>
         <input type="checkbox" onChange={onChromeless} /> Chromeless
       </div>
       <div>
-        <select value={src} onChange={onSelectSrc}>
+        {/* <BasicSelect elements={STREAMS} initialValue={src} onChange={onSelectSrc} /> */}
+        <SelectVideoList elements={STREAMS} initialValue={src} onChange={onSelectSrc}/>
+
+        {/* <select value={src} onChange={onSelectSrc}>
           {STREAMS.map(stream => (
-            <option value={stream.src}>{stream.name}</option>
+            <option key={stream.id} value={stream.id}>{stream.name}</option>
           ))}
-        </select>
+        </select>*/}
       </div>
       {show && (
-        <ShakaPlayer ref={ref} autoPlay src={src} chromeless={chromeless} />
+        <>
+          <ShakaPlayer ref={ref} autoPlay src={video.src} chromeless={chromeless} lang="es" />
+          <pre>{JSON.stringify(video, null, 2)}</pre>
+          <FeaturesList features={video.features} />
+        </>
       )}
     </div>
   );
