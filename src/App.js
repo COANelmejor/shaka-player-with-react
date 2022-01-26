@@ -15,26 +15,37 @@ const STREAMS = videoAssets.map(asset => ({
   features: asset.feature || []
 }));
 
-function App() {
+export default function App() {
+  // Determine if the video is presented
   const [show, setShow] = React.useState(true);
+
+  // Determine if the UI is presented
   const [chromeless, setChromeless] = React.useState(false);
+
+  // TODO Find out what ref is for
   const ref = React.useRef(null);
 
+  // Current video data
+  const [video , setVideo] = React.useState(STREAMS[0]);
+  // Source of video to present
+  const [src, setSrc] = React.useState(STREAMS[0].id);
+
+  // TODO Determine what is window.getShakaInst used for
   React.useEffect(() => {
     window.getShakaInst = () => ref.current;
   }, []);
 
+  // Tooggle the visibility of video
   function onToggle() {
     setShow(!show);
   }
 
+  // Tooggle the visibility of UI
   function onChromeless() {
     setChromeless(!chromeless);
   }
 
-  const [src, setSrc] = React.useState(STREAMS[0].id);
-  const [video , setVideo] = React.useState(STREAMS[0]);
-
+  // Detect the change of selected video, and update the respective hooks
   function onSelectSrc(event) {
     const id = event.target.value;
     setSrc(id);
@@ -55,14 +66,7 @@ function App() {
         <input type="checkbox" onChange={onChromeless} /> Chromeless
       </div>
       <div>
-        {/* <BasicSelect elements={STREAMS} initialValue={src} onChange={onSelectSrc} /> */}
         <SelectVideoList elements={STREAMS} initialValue={src} onChange={onSelectSrc}/>
-
-        {/* <select value={src} onChange={onSelectSrc}>
-          {STREAMS.map(stream => (
-            <option key={stream.id} value={stream.id}>{stream.name}</option>
-          ))}
-        </select>*/}
       </div>
       {show && (
         <>
@@ -74,5 +78,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
