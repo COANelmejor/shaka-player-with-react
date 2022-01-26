@@ -1,13 +1,23 @@
+// Modules
 import React from 'react';
 import ShakaPlayer from 'shaka-player-react';
 import uuid from 'react-uuid'
-import './App.css'
+
+// Material UI Components
 import { videoAssets } from './data/video-list';
 import { Button } from '@mui/material';
+
+// Custom Components
 import FeaturesList from './components/FeaturesList';
 import SelectVideoList from './components/SelectVideoList';
-// import BasicSelect from './components/BasicList';
+import ChromelessSwitch from './components/ChromelessSwitch';
 
+// Styles
+import './App.css'
+import './styles/home.css'
+import './styles/ShakaPlayer.css'
+
+// Mapping video assets to video objects to correct use in the video list
 const STREAMS = videoAssets.map(asset => ({
   id: uuid(),
   src: asset.manifestUri,
@@ -15,6 +25,7 @@ const STREAMS = videoAssets.map(asset => ({
   features: asset.feature || []
 }));
 
+// Main App Component
 export default function App() {
   // Determine if the video is presented
   const [show, setShow] = React.useState(true);
@@ -41,8 +52,9 @@ export default function App() {
   }
 
   // Tooggle the visibility of UI
-  function onChromeless() {
-    setChromeless(!chromeless);
+  function onChromeless(event) {
+    const { checked } = event.target;
+    setChromeless(checked);
   }
 
   // Detect the change of selected video, and update the respective hooks
@@ -54,23 +66,34 @@ export default function App() {
 
   return (
     <div>
-      <div>
-        <Button
-          onClick={onToggle}
-          variant={show ? 'outlined' : 'contained'}
-          size={show ? 'small' : 'large'}>
+      <div className="video__control-bar">
+        <div className='video__select-video-list-div'>
+          <SelectVideoList
+            elements={STREAMS}
+            initialValue={src}
+            onChange={onSelectSrc}
+          />
+        </div>
+        <div className='video__toggle-button-div'>
+          <Button
+            onClick={onToggle}
+            variant={show ? 'outlined' : 'contained'}
+            size={show ? 'small' : 'large'}
+          >
             {show ? 'Hide' : 'Show'}
           </Button>
-      </div>
-      <div>
-        <input type="checkbox" onChange={onChromeless} /> Chromeless
-      </div>
-      <div>
-        <SelectVideoList elements={STREAMS} initialValue={src} onChange={onSelectSrc}/>
+        </div>
+        <div className='video__toggle-ui-button-div'>
+          <ChromelessSwitch
+            label="Disable UI"
+            helperText='Show and hide the UI to take effect.'
+            onChange={onChromeless}
+          />
+        </div>
       </div>
       {show && (
         <>
-          <ShakaPlayer ref={ref} autoPlay src={video.src} chromeless={chromeless} lang="es" />
+          <ShakaPlayer autoPlay ref={ref} src={video.src} chromeless={chromeless} />
           <pre>{JSON.stringify(video, null, 2)}</pre>
           <FeaturesList features={video.features} />
         </>
