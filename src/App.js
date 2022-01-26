@@ -28,7 +28,7 @@ const STREAMS = videoAssets.map(asset => ({
 // Main App Component
 export default function App() {
   // Determine if the video is presented
-  const [show, setShow] = React.useState(true);
+  const [show, setShow] = React.useState(false);
 
   // Determine if the UI is presented
   const [chromeless, setChromeless] = React.useState(false);
