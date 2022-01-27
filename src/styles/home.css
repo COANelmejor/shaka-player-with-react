@@ -29,3 +29,6 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+.video__slicker {
+  padding: 0 4rem;
+}
