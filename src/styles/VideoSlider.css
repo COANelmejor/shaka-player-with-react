@@ -1,0 +1,30 @@
+/* .slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+} */
+.slick-prev::before, .slick-next::before {
+  color: #534e4e;
+}
+.slick-prev::before:hover, .slick-next::before:hover {
+  color: #ffc107;
+}
+
+.slick-slide {
+  /* background-color: aqua; */
+  margin: 0px 0px;
+  text-align: center;
+  
+
+}
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slide:hover {
+  background-color: #ffc107;
+  cursor: pointer;
+}
