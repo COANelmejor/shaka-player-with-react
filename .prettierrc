@@ -1,4 +1,24 @@
 {
   "tabWidth": 2,
-  "useTabs": false
+  "useTabs": false,
+  "insertSpaces": true,
+  "cursorStyle": "line",
+  "lineNumbers": "on",
+  "folding": "all",
+  "matchBrackets": true,
+  "autoCloseBrackets": true,
+  "autoCloseTags": true,
+  "rulers": [
+    80
+  ],
+  "glyphMargin": true,
+  "minimap": {
+    "enabled": true
+  },
+  "lineDecorationsWidth": 10,
+  "lineHeight": 22,
+  "fontSize": 16,
+  "fontFamily": "ubuntu mono, Consolas, 'Courier New', monospace",
+  "fontWeight": "normal",
+  "fontLigatures": false
 }
