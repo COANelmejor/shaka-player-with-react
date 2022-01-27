@@ -11,9 +11,10 @@ import { Button } from '@mui/material';
 import FeaturesList from './components/FeaturesList';
 import SelectVideoList from './components/SelectVideoList';
 import ChromelessSwitch from './components/ChromelessSwitch';
+import VideoSlider from './components/VideoSlider';
 
 // Styles
-import './App.css'
+import './styles/App.css'
 import './styles/home.css'
 import './styles/ShakaPlayer.css'
 
@@ -22,6 +23,7 @@ const STREAMS = videoAssets.map(asset => ({
   id: uuid(),
   src: asset.manifestUri,
   name: asset.name,
+  thumbnail: asset.iconUri || `https://via.placeholder.com/300x210/000000/FFFFFF/?text=${asset.name.substring(0, 10).split(' ').join('+')}`,
   features: asset.feature || []
 }));
 
@@ -64,16 +66,24 @@ export default function App() {
     setVideo(STREAMS.find(stream => stream.id === id));
   }
 
+  // Get Video Id and automatically update the hooks that make the video to play.
+  function onSelectSrcShow (event) {
+    const id = event.target.value;
+    setShow(true);
+    setSrc(id);
+    setVideo(STREAMS.find(stream => stream.id === id));
+  }
+
   return (
     <div>
       <div className="video__control-bar">
-        <div className='video__select-video-list-div'>
+        {/* <div className='video__select-video-list-div'>
           <SelectVideoList
             elements={STREAMS}
             initialValue={src}
             onChange={onSelectSrc}
           />
-        </div>
+        </div> */}
         <div className='video__toggle-button-div'>
           <Button
             onClick={onToggle}
@@ -92,12 +102,15 @@ export default function App() {
         </div>
       </div>
       {show && (
-        <>
+        <div className='video__features'>
           <ShakaPlayer autoPlay ref={ref} src={video.src} chromeless={chromeless} />
           <pre>{JSON.stringify(video, null, 2)}</pre>
           <FeaturesList features={video.features} />
-        </>
+        </div>
       )}
+      <div className='video__slicker'>
+        <VideoSlider videoList={STREAMS} onSelectVideo={onSelectSrcShow}/>
+      </div>
     </div>
   );
 }
