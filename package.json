@@ -15,6 +15,7 @@
     "react-slick": "^0.28.1",
     "react-uuid": "^1.0.2",
     "shaka-player-react": "^1.1.2",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
