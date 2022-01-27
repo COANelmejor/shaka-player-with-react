@@ -91,7 +91,7 @@ export default function App() {
             variant={show ? 'outlined' : 'contained'}
             size={show ? 'small' : 'large'}
           >
-            {show ? 'Hide' : 'Show'}
+            {show ? 'Hide player' : 'Show player'}
           </Button>
         </div>
         <div className='video__toggle-ui-button-div'>
