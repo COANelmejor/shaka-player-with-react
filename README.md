@@ -1,6 +1,10 @@
 # Getting Shaka Player Works on React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is just a simple React app that uses the `shaka-player-react` module.
+
+Also integrates a simple slider to control the videos to play, and a simple use of Material UI.
+
+<sup><sub>This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</sub></sup>
 
 ## Available Scripts
 
