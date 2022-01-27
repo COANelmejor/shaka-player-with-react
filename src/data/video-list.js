@@ -30,30 +30,30 @@ const videoAssets = [{
     "markAsFeatured": "'Angel One'",
     "feature": ["DASH", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "WEBM", "OFFLINE"],
   },
-  {
-    "name": 'Angel One "multicodec, multilingual, Widevine",',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/dash.mpd',
-    "source": "SHAKA",
-    "keySystem": "WIDEVINE",
-    "feature": ["DASH", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "WEBM", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-  },
-  {
-    "name": 'Angel One "multicodec, multilingual, ClearKey server",',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-clearkey/dash.mpd',
-    "source": "SHAKA",
-    "keySystem": "CLEAR_KEY",
-    "feature": ["DASH", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "WEBM", "OFFLINE"],
-    "licenseServer": {
-      "server": 'org.w3.clearkey',
-      "url": 'https://cwip-shaka-proxy.appspot.com/clearkey?_u3wDe7erb7v8Lqt8A3QDQ=ABEiM0RVZneImaq7zN3u_w'
-    },
-  },
+  // {
+  //   "name": 'Angel One "multicodec, multilingual, Widevine",',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/dash.mpd',
+  //   "source": "SHAKA",
+  //   "keySystem": "WIDEVINE",
+  //   "feature": ["DASH", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "WEBM", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  // },
+  // {
+  //   "name": 'Angel One "multicodec, multilingual, ClearKey server",',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-clearkey/dash.mpd',
+  //   "source": "SHAKA",
+  //   "keySystem": "CLEAR_KEY",
+  //   "feature": ["DASH", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "WEBM", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'org.w3.clearkey',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/clearkey?_u3wDe7erb7v8Lqt8A3QDQ=ABEiM0RVZneImaq7zN3u_w'
+  //   },
+  // },
   {
     "name": 'Angel One "HLS, MP4, multilingual",',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
@@ -61,44 +61,44 @@ const videoAssets = [{
     "source": "SHAKA",
     "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
   },
-  {
-    "name": 'Angel One "HLS, MP4, multilingual, Widevine",',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8',
-    "source": "SHAKA",
-    "keySystem": "WIDEVINE",
-    "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-  },
-  {
-    "name": 'Angel One "HLS, MP4, multilingual, Widevine, single linear ad",',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8',
-    "source": "SHAKA",
-    "keySystem": "WIDEVINE",
-    "AdTagUri": "shakaAssets.AdTag.SINGLE_LINEAR_AD",
-    "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-  },
-  {
-    "name": 'Angel One "HLS, MP4, multilingual, Widevine, single non-linear ad",',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8',
-    "source": "SHAKA",
-    "keySystem": "WIDEVINE",
-    "adTagUri": "shakaAssets.AdTag.SINGLE_NON_LINEAR_AD",
-    "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-  },
+  // {
+  //   "name": 'Angel One "HLS, MP4, multilingual, Widevine",',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8',
+  //   "source": "SHAKA",
+  //   "keySystem": "WIDEVINE",
+  //   "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  // },
+  // {
+  //   "name": 'Angel One "HLS, MP4, multilingual, Widevine, single linear ad",',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8',
+  //   "source": "SHAKA",
+  //   "keySystem": "WIDEVINE",
+  //   "AdTagUri": "shakaAssets.AdTag.SINGLE_LINEAR_AD",
+  //   "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  // },
+  // {
+  //   "name": 'Angel One "HLS, MP4, multilingual, Widevine, single non-linear ad",',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/angel_one.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8',
+  //   "source": "SHAKA",
+  //   "keySystem": "WIDEVINE",
+  //   "adTagUri": "shakaAssets.AdTag.SINGLE_NON_LINEAR_AD",
+  //   "feature": ["HLS", "MP4", "MULTIPLE_LANGUAGES", "SUBTITLES", "SURROUND", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  // },
   {
     "name": 'Sintel 4k (multicodec)',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
@@ -127,60 +127,64 @@ const videoAssets = [{
     "source": "SHAKA",
     "feature": ["DASH", "HIGH_DEFINITION", "MP4", "SUBTITLES", "OFFLINE"],
   },
+  // {
+  //   "name": 'Sintel 4k (multicodec, Widevine)',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/sintel-widevine/dash.mpd',
+  //   "source": "SHAKA",
+  //   "keySystem": "WIDEVINE",
+  //   "feature": ["DASH", "HIGH_DEFINITION", "MP4", "SUBTITLES", "WEBM", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  //   "extraConfig": {
+  //     "drm": {
+  //       "advanced": {
+  //         'com.widevine.alpha': {
+  //           "serverCertificateUri": 'https://cwip-shaka-proxy.appspot.com/service-cert',
+  //         },
+  //       },
+  //     },
+  //   },
+  // },
+  // {
+  //   "name": 'Sintel 4k (multicodec, Widevine, ads)',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/sintel-widevine/dash.mpd',
+  //   "source": "SHAKA",
+  //   "description": "'A Blender Foundation short film, protected by Widevine encryption with pre-roll, mid-roll, and post-roll ads.'",
+  //   "markAsFeatured": "'Sintel'",
+  //   "adTagUri": "shakaAssets.AdTag.AD_POD_PREROLL_MIDROLL_POSTROLL",
+  //   "keySystem": "WIDEVINE",
+  //   "feature": ["DASH", "HIGH_DEFINITION", "MP4", "SUBTITLES", "WEBM", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  // },
   {
-    "name": 'Sintel 4k (multicodec, Widevine)',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/sintel-widevine/dash.mpd',
-    "source": "SHAKA",
-    "keySystem": "WIDEVINE",
-    "feature": ["DASH", "HIGH_DEFINITION", "MP4", "SUBTITLES", "WEBM", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-    "extraConfig": {
-      "drm": {
-        "advanced": {
-          'com.widevine.alpha': {
-            "serverCertificateUri": 'https://cwip-shaka-proxy.appspot.com/service-cert',
-          },
-        },
-      },
-    },
-  },
-  {
-    "name": 'Sintel 4k (multicodec, Widevine, ads)',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/sintel-widevine/dash.mpd',
-    "source": "SHAKA",
-    "description": "'A Blender Foundation short film, protected by Widevine encryption with pre-roll, mid-roll, and post-roll ads.'",
-    "markAsFeatured": "'Sintel'",
-    "adTagUri": "shakaAssets.AdTag.AD_POD_PREROLL_MIDROLL_POSTROLL",
-    "keySystem": "WIDEVINE",
-    "feature": ["DASH", "HIGH_DEFINITION", "MP4", "SUBTITLES", "WEBM", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-  }, {
     "name": 'Sintel 4k (MP4, VTT in MP4)',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/sintel-mp4-wvtt/dash.mpd',
     "source": "SHAKA",
     "feature": ["DASH", "HIGH_DEFINITION", "MP4", "SUBTITLES", "OFFLINE"],
-  }, {
+  },
+  {
     "name": 'Sintel w/ 44 subtitle languages',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/sintel.png',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/sintel-many-subs/dash.mpd',
     "source": "SHAKA",
     "feature": ["DASH", "MP4", "SUBTITLES", "SURROUND", "OFFLINE"],
-  }, {
+  },
+  {
     "name": 'Heliocentrism "multicodec, multiperiod",',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/heliocentricism.png',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/heliocentrism/heliocentrism.mpd',
     "source": "SHAKA",
     "feature": ["DASH", "MP4", "WEBM", "OFFLINE"],
-  }, {
+  },
+  {
     "name": 'Heliocentrism "multicodec, multiperiod, xlink",',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/heliocentricism.png',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/heliocentrism-xlink/heliocentrism.mpd',
@@ -190,7 +194,8 @@ const videoAssets = [{
     // Licensed under Creative Commons BY-NC 3.0.
     // Free for non-commercial use with attribution.
     // http://creativecommons.org/licenses/by-nc/3.0/
-  }, {
+  },
+  {
     "name": '"Dig the Uke" by Stefan Kartenberg "audio only, multicodec",',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/audio_only.png',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/dig-the-uke-clear/dash.mpd',
@@ -202,18 +207,20 @@ const videoAssets = [{
     // Licensed under Creative Commons BY-NC 3.0.
     // Free for non-commercial use with attribution.
     // http://creativecommons.org/licenses/by-nc/3.0/
-  }, {
-    "name": '"Dig the Uke" by Stefan Kartenberg "audio only, multicodec, Widevine",',
-    "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/audio_only.png',
-    "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/dig-the-uke/dash.mpd',
-    "source": "SHAKA",
-    "keySystem": "WIDEVINE",
-    "feature": ["DASH", "MP4", "AUDIO_ONLY", "WEBM", "OFFLINE"],
-    "licenseServer": {
-      "server": 'com.widevine.alpha',
-      "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
-    },
-  }, {
+  },
+  // {
+  //   "name": '"Dig the Uke" by Stefan Kartenberg "audio only, multicodec, Widevine",',
+  //   "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/audio_only.png',
+  //   "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/dig-the-uke/dash.mpd',
+  //   "source": "SHAKA",
+  //   "keySystem": "WIDEVINE",
+  //   "feature": ["DASH", "MP4", "AUDIO_ONLY", "WEBM", "OFFLINE"],
+  //   "licenseServer": {
+  //     "server": 'com.widevine.alpha',
+  //     "url": 'https://cwip-shaka-proxy.appspot.com/no_auth'
+  //   },
+  // },
+  {
     "name": 'Tears of Steel "multicodec, TTML",',
     "iconUri": 'https://storage.googleapis.com/shaka-asset-icons/tears_of_steel.png',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/tos-ttml/dash.mpd',
