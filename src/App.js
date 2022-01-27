@@ -9,7 +9,7 @@ import { Button } from '@mui/material';
 
 // Custom Components
 import FeaturesList from './components/FeaturesList';
-import SelectVideoList from './components/SelectVideoList';
+// import SelectVideoList from './components/SelectVideoList';
 import ChromelessSwitch from './components/ChromelessSwitch';
 import VideoSlider from './components/VideoSlider';
 
@@ -41,6 +41,7 @@ export default function App() {
   // Current video data
   const [video , setVideo] = React.useState(STREAMS[0]);
   // Source of video to present
+  // eslint-disable-next-line no-unused-vars
   const [src, setSrc] = React.useState(STREAMS[0].id);
 
   // TODO Determine what is window.getShakaInst used for
@@ -60,11 +61,11 @@ export default function App() {
   }
 
   // Detect the change of selected video, and update the respective hooks
-  function onSelectSrc(event) {
-    const id = event.target.value;
-    setSrc(id);
-    setVideo(STREAMS.find(stream => stream.id === id));
-  }
+  // function onSelectSrc(event) {
+  //   const id = event.target.value;
+  //   setSrc(id);
+  //   setVideo(STREAMS.find(stream => stream.id === id));
+  // }
 
   // Get Video Id and automatically update the hooks that make the video to play.
   function onSelectSrcShow (event) {
