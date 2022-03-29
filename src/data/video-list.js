@@ -1,4 +1,54 @@
-const videoAssets = [{
+const videoAssets = [
+  // {
+  //   "name": "CMAF Music Channel",
+  //   "manifestUri": "https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/5a762a8c69ea44e98ec2c9a9f69e2217/CMAF_HLS/index.m3u8",
+  // },
+  // {
+  //   "name": "DASH Music Channel",
+  //   "manifestUri": "https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/188139cc2f7f4137ad48d1600f815898/index.mpd",
+  // },
+  // {
+  //   "name": "HLS Music Channel",
+  //   "manifestUri": "https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/50a4457f1ae24d18adb88c2ed229197e/index.m3u8",
+  // },
+  
+  // {
+  //   "name": "JOMA",
+  //   "manifestUri": "https://rr1---sn-upbvbu-b05z.googlevideo.com/videoplayback?expire=1644618697&ei=aI8GYvzWOvO-j-8P7Liv-Ac&ip=2803%3Ad100%3Ae080%3A5dd%3A6404%3Aa7b7%3A59d1%3A59d0&id=o-AKHalT-1Xi0vQW5D2tNO-PhtBGN3UNp7u82cu8fMJiXC&itag=315&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303%2C308%2C315%2C394%2C395%2C396%2C397%2C398%2C399%2C400%2C401&source=youtube&requiressl=yes&mh=y4&mm=31%2C29&mn=sn-upbvbu-b05z%2Csn-hp57knzz&ms=au%2Crdu&mv=m&mvi=1&pl=42&initcwndbps=971250&vprv=1&mime=video%2Fwebm&ns=PH3VATYhix1WEynuDxFcgzgG&gir=yes&clen=361720932&dur=537.899&lmt=1622603653748348&mt=1644596698&fvip=1&keepalive=yes&fexp=24001373%2C24007246&c=WEB&txp=5532432&n=nKAnlB3cbdhaLCn&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIhALkJjVe0EU7oPaaX8rfn1H7-YnThK8Kf6Hnr9R1mfATWAiAc4SZR2cx7oZI6zDlnLmhmeetnr1sP4riFyGZQlVg9xg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhALT9JQe2mvOR6WYrEw7mkMu6OegBWnADxxSUA2gwhS7EAiBEdheOwuPZzUAIbBOsAER34VHQ3RtEIZusNfOMMyhteA%3D%3D",
+  // },
+  // {
+  //   "name": "Youtube Video Live",
+  //   "manifestUri": "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1644617329/ei/EYoGYsPTAqKGlAPRuZTICA/ip/2803:d100:e080:5dd:6404:a7b7:59d1:59d0/id/36YnV9STBqc.6/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/hls_chunk_host/rr1---sn-upbvbu-b056.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/8140/mh/Lz/mm/44/mn/sn-upbvbu-b056/ms/lva/mv/m/mvi/1/pl/42/dover/11/pacing/0/keepalive/yes/fexp/24001373,24007246/beids/23886211/mt/1644595240/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRAIgEGyry7hcoETPVlJGXVAPEKsQDLneHU5RVG23wd7Zu-kCICHV12FXv7-GT-AVU9Pc5JS7iOFPNqzs_J7CjQ6CDb04/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgI_1UKX9sOMiek9WiKrI9IgC5-IcK0AZsJd6vfHU4SKcCIDj0WXXCp5RMOq_5Ak0Nh6uk_UKdJbci-8P5-PbnkG67/playlist/index.m3u8",
+  // },
+  // {
+  //   "name": "CMAF Mini Video Live",
+  //   "manifestUri": "https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/e2908ebfe98545deada3506c3e05b0e9/CMAF_HLS/index.m3u8",
+  // },
+  // {
+  //   "name": "DASH Mini Video Live",
+  //   "manifestUri": "https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/04c2c4cc6f2a4194ac20e5af73ac322e/index.mpd",
+  // }, 
+  // {
+  //   "name": "HLS Mini Video Live",
+  //   "manifestUri": "https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/a195630aef5c41078a5b5ad87915b330/index.m3u8",
+  // },
+  // {
+  //   "name": "CMAF React-Native Live",
+  //   "manifestUri": "https://c75a7e79204e539d.mediapackage.us-east-1.amazonaws.com/out/v1/c69146d6e8474045b002d41153e989fc/CMAF_HLS/index.m3u8",
+  // },
+  // {
+  //   "name": "DASH React-Native Live",
+  //   "manifestUri": "https://c75a7e79204e539d.mediapackage.us-east-1.amazonaws.com/out/v1/b3c63475fcc244bba267323465b12d8e/index.mpd",
+  // }, 
+  // {
+  //   "name": "HLS React-Native Live",
+  //   "manifestUri": "https://c75a7e79204e539d.mediapackage.us-east-1.amazonaws.com/out/v1/55e11ed61ffd4ddaa55c95dfccad87f0/index.m3u8",
+  // },
+  // {
+  //   "name": "AWS2C M3U8 Live Test",
+  //   "manifestUri": "https://d1tms42mnygb3e.cloudfront.net/out/v1/91ea0faf0fc44bb1b602444e960e33fe/index.m3u8",
+  // },
+  {
     "name": 'Angel One MPEG-DASH',
     "manifestUri": 'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd'
   },
