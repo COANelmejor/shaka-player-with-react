@@ -23,7 +23,7 @@ const STREAMS = videoAssets.map(asset => ({
   id: uuid(),
   src: asset.manifestUri,
   name: asset.name,
-  thumbnail: asset.iconUri || `https://via.placeholder.com/300x210/000000/FFFFFF/?text=${asset.name.substring(0, 10).split(' ').join('+')}`,
+  thumbnail: asset.iconUri || `https://via.placeholder.com/300x210/000000/FFFFFF/?text=${asset.name.substring(0, 20).split(' ').join('+')}`,
   features: asset.feature || []
 }));
 
